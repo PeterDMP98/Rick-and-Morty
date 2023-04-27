@@ -1,0 +1,31 @@
+.filter__form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+#locationInput {
+  width: 200px;
+  padding: 0.6em 1.2em;
+  border-radius: 0.5em;
+}
+
+.filter__btn {
+  border-radius: 0 0.5em 0.5em 0;
+  padding: 0 1em;
+  background-color: rgb(125, 199, 14);
+  color: #fff;
+}
+
+.filter__list {
+  color: black;
+  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+  list-style: none;
+  position: absolute;
+}
+
+.filter__item {
+  padding: 10px 5px;
+  cursor: pointer;
+}
