@@ -18,8 +18,8 @@ const FormFilter = ({ setNameLocation, setStarCurrentPage, setLastCurrentPage })
 
     const changeInput = (e) => {
         setLocationName(locations.filter(name => !name.toLowerCase().indexOf(e.target.value)));
-        // console.log(e.target.value.key);
         if (e.target.value == []) {
+            
             setLocationName([])
         }
     }
@@ -27,6 +27,8 @@ const FormFilter = ({ setNameLocation, setStarCurrentPage, setLastCurrentPage })
     const option = e => {
         setOptionLocation(e.target.id)
         setLocationName([])
+        setNameLocation(e.target.id)
+        setOptionLocation()
     }
 
     return (
@@ -43,7 +45,6 @@ const FormFilter = ({ setNameLocation, setStarCurrentPage, setLastCurrentPage })
                         }
                     </ul>
                 </div>
-                <button className='filter__btn' >Buscar</button>
             </form>
         </div>
 
