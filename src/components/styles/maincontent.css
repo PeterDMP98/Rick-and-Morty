@@ -4,3 +4,15 @@
     flex-wrap: wrap;
     gap: 3em;
 }
+
+.content{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.paginacion{
+    padding: 0 0.5em;
+}

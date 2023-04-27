@@ -34,22 +34,29 @@ const MainContent = ({ locations, starCurrentPage, lastCurrentPage }) => {
     }, [locations])
 
     return (
-        <>
-            <LocationInfo locations={locations} />
-            <div className='resident-container'>
-                {
-                    locations?.results[0].residents.map(url => (
-                        <Residentcard key={url} url={url} />
-                    )).slice(firstIndex, lastIndex)
-                }
+        <div className='content'>
+            
+            <div className='content-residen'>
+                <LocationInfo locations={locations} />
+                <div className='resident-container'>
+                    {
+                        locations?.results[0].residents.map(url => (
+                            <Residentcard key={url} url={url} />
+                        )).slice(firstIndex, lastIndex)
+                    }
+                </div>
             </div>
-            <Pagination
-                characterPerPage={characterPerPage}
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-                totalCharacter={totalCharacter}
-            />
-        </>
+
+            <div className='paginacion'>
+                <Pagination
+                    characterPerPage={characterPerPage}
+                    currentPage={currentPage}
+                    setCurrentPage={setCurrentPage}
+                    totalCharacter={totalCharacter}
+                />
+            </div>
+
+        </div>
     )
 }
 

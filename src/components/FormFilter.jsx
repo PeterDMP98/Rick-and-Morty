@@ -33,7 +33,7 @@ const FormFilter = ({ setNameLocation, setStarCurrentPage, setLastCurrentPage })
         <div className='filter'>
             <form className='filter__form' onSubmit={handleSearch}>
                 <div className='filter__input' >
-                    <input value={optionLocation} onChange={changeInput} id='locationInput' type="text" />
+                    <input autoComplete='off' value={optionLocation} onChange={changeInput} id='locationInput' type="text" />
                     <ul className='filter__list'>
                         {
                             locations[2] ? locationName.sort().map(name => (
